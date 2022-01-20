@@ -76,8 +76,8 @@ auth(Host, Sock, Mod, _ClientId, Timeout, _SaslOpts = {_Method = gssapi, Keytab,
                     ok = setopts(Sock, Mod, [{active, once}]);
                 ?SASL_CONTINUE ->
                     sasl_recv(Mod, Sock, Timeout);
-                Other ->
-                    Other
+                Another ->
+                    Another
             end;
         Other ->
             {error, Other}
